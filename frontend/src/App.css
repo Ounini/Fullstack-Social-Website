@@ -1,0 +1,212 @@
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+}
+.App {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+}
+.navbar {
+    display: block !important;
+    justify-content: start;
+    text-align: start;
+    background-color: cornflowerblue;
+    padding: 25px !important;
+    width: 100%;
+    padding-left: 0px !important;
+    padding-left: 0px !important;
+}
+a {
+    padding: 10px;
+    color: white !important;
+    text-decoration: none !important;
+}
+a:hover {
+    color: red;
+}
+.post {
+    margin-top: 50px;
+    width: 350px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 1px 0 #000;
+}
+.post:hover {
+    box-shadow: 0 0 5px 0 #000;
+    cursor: pointer;
+}
+.title {
+    text-transform: capitalize;
+    height: 50px;
+    background-color: cornflowerblue;
+    color: #fff;
+    padding: 12px;
+}
+.body {
+    padding: 50px;
+}
+.footer {
+    text-transform: capitalize;
+    height: 50px;
+    background-color: cornflowerblue;
+    color: #fff;
+    padding: 12px;
+    text-align: start;   
+}
+.createPostPage {
+    margin: 50px;
+}
+.formContainer {
+    width: 550px;
+    border: 5px solid blue;
+    padding: 15px;
+}
+.form-label {
+    float: left;
+    margin-top: 10px; 
+    font-size: 16px;  
+}
+.btn,
+.btn-primary {
+    margin-top: 15px;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+}
+.postPage {
+    display: grid !important;
+}
+.leftSide {
+    margin: 30px;
+}
+.postTitle {
+    font-size: 16px;
+    padding: 20px;
+    background-color: cornflowerblue;
+    color: #fff;
+    text-transform: capitalize;
+}
+.postBody {
+    padding: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.postFooter {
+    padding: 20px;
+    background-color: cornflowerblue;
+    color: #fff;
+    text-align: start;
+}
+.rightSide {
+    margin-top: 50px;
+    padding: 20px;
+}
+.input-field {
+    width: 200px !important;
+    height: 60px;
+}
+.button {
+    width: 200px !important;
+    margin-top: 5px !important;
+    margin-left: -60px !important;
+}
+.addCommentContainer {
+    padding-left: 60px;
+}
+.comment {
+    border: 1px rgba(26, 26, 26);
+    box-shadow: 0px 0px 1px 0 #000;
+    margin: 20px;
+    width: 300px;
+    padding: 20px;
+    text-align: start;
+    border-radius: 5px;
+}
+.login-container {
+    display: grid;
+    justify-content: center;
+    margin: 100px;
+}
+.login-input {
+    box-shadow: 0 0 1px 1px cornflowerblue;
+}
+.logout-button {
+    float: right;
+    text-align: end;
+    width: 100px;
+    font-size: 14px !important;
+    margin-top: -25px !important;
+    margin-left: 20px !important;
+}
+h1.username {
+    text-align: end;
+    margin-top: -30px;
+    margin-bottom: -10px;
+    padding-right: 110px;
+    font-size: 20px;
+}
+.trash {
+    background-color: transparent !important;
+    border: none !important;
+    width: 50px;
+}
+.trash i {
+    color: red;
+}
+.post-btn {
+    width: auto;
+    padding: none !important;
+    margin: none !important;
+    margin-top: -20px;
+    float: right;
+    margin-top: -8px;
+    background-color: transparent !important; 
+    border: none !important;   
+}
+.post-btn i.like {
+    color: yellow;
+}
+.post-btn i.like2 {
+    color: red;
+}
+.likes-number {
+    margin-left: 5px;
+}
+.link-home {
+    color: red !important;
+}
+.trash-btn {
+    background-color: transparent !important;
+    width: auto;
+    float: right;
+    margin-top: -10px;
+    border: none !important;
+}
+.post-trash:hover {
+    color: red;
+}
+.profilePageContainer {
+    margin: 50px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+.profile-likes {
+    float: right;
+}
+.changePasswordCon {
+    margin: 50px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+.passwordInput {
+    width: 400px;
+}
+.form-control {
+    margin-top: 20px;
+}
