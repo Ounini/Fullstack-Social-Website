@@ -9,7 +9,7 @@ const router = express.Router()
 router.post('/', async (req, res) => {
 	const {username, password} = req.body
 	bcrypt.hash(password, 10).then((hash) => {
-		User.insertMany({
+		User.create({
 			username: username,
 			password: hash
 		})
