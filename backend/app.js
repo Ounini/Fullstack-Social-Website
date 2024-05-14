@@ -15,6 +15,10 @@ app.use('/auth', userRouter)
 const likeRouter = require('./routes/Likes')
 app.use('/likes', likeRouter)
 
-app.listen(3008, () => {
-	console.log('Server running on port 3008 ')
-})
+let port = process.env.PORT
+if (port == null || port == "") {
+ 	port = 3000
+ }
+ app.listen(port, function() {
+  	console.log("Server started on port 3000")
+  })
