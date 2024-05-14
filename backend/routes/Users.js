@@ -71,7 +71,7 @@ router.put('/changePassword', validateToken, async (req, res) => {
 		})
 	} catch (error) {
 		console.error('Error in changing Password:', error)
-		res.status(5000).json({ error: 'Internal Server Error'})
+		res.status(500).json({ error: 'Internal Server Error'})
 	}
 })
 

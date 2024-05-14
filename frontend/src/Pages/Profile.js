@@ -12,11 +12,11 @@ function Profile() {
     const {authState} = useContext(AuthContext)
 
     useEffect(() => {
-        axios.get(`http://localhost:3008/auth/basicinfo/${id}`)
+        axios.get(`https://fullstack-social-website.onrender.com/auth/basicinfo/${id}`)
         .then((response) => {
             setUsername(response.data.username)
         })
-        axios.get(`http://localhost:3008/posts/byuserId/${id}`)
+        axios.get(`https://fullstack-social-website.onrender.com/posts/byuserId/${id}`)
         .then((response) => {
             setListOfPosts(response.data)
         })

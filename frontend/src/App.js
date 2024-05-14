@@ -17,14 +17,14 @@ import ChangePassword from './Pages/ChangePassword';
 function App() {
   const [post, setPost] = useState({})
   const addPost = async (post) => {
-    const response = await axios.post('http://localhost:3008/posts', post, {
+    const response = await axios.post('https://fullstack-social-website.onrender.com/posts', post, {
       headers: {accessToken: localStorage.getItem('accessToken')},
     })
   }
 
   const [registration, setRegistration] = useState({})
   const signUp = async (registration) => {
-    const response = await axios.post('http://localhost:3008/auth', registration)
+    const response = await axios.post('https://fullstack-social-website.onrender.com/auth', registration)
     console.log(registration)
   }
 
@@ -34,7 +34,7 @@ function App() {
     status: false
   })
   useEffect(() => {
-    axios.get('http://localhost:3008/auth/user', {headers: {
+    axios.get('https://fullstack-social-website.onrender.com/auth/user', {headers: {
       accessToken: localStorage.getItem('accessToken')
     }}).then((response) => {
       if (response.data.error) {

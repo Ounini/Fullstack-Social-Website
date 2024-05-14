@@ -14,7 +14,7 @@ function Home() {
         if (!localStorage.getItem('accessToken')) {
             navigate('/login')
         } else {
-            axios.get('http://localhost:3008/posts', {
+            axios.get('https://fullstack-social-website.onrender.com/posts', {
                 headers: {accessToken: localStorage.getItem('accessToken')},
             })
             .then((response) => {
@@ -31,7 +31,7 @@ function Home() {
     const likeAPost = async (postId) => {
         try {
             await axios.post(
-                'http://localhost:3008/likes', 
+                'https://fullstack-social-website.onrender.com/likes', 
                 { PostId: postId }, 
                 { headers: { accessToken: localStorage.getItem('accessToken') } }
             );
@@ -46,7 +46,7 @@ function Home() {
             });
     
             // Fetch the updated list of posts from the server and update the listOfPosts state
-            const response = await axios.get('http://localhost:3008/posts', {
+            const response = await axios.get('https://fullstack-social-website.onrender.com/posts', {
                 headers: { accessToken: localStorage.getItem('accessToken') },
             });
             setListOfPosts(response.data.listOfPosts);

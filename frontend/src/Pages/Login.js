@@ -12,7 +12,7 @@ function Login() {
 
     const login = () => {
         const data = {username: username, password: password}
-        axios.post('http://localhost:3008/auth/login', data).then((response) => {
+        axios.post('https://fullstack-social-website.onrender.com/auth/login', data).then((response) => {
             if(response.data.error) {
                 alert(response.data.error)
             } else {

@@ -13,17 +13,17 @@ function Post() {
     const {authState} = useContext(AuthContext)
 
     useEffect(() => {
-        axios.get(`http://localhost:3008/posts/byId/${id}`).then((response) => {
+        axios.get(`https://fullstack-social-website.onrender.com/posts/byId/${id}`).then((response) => {
             setPostObject(response.data)
         })
-        axios.get(`http://localhost:3008/comments/${id}`).then((response) => {
+        axios.get(`https://fullstack-social-website.onrender.com/comments/${id}`).then((response) => {
             setComments(response.data)
         })
     }, [])
 
     const addComment = () => {
         axios
-            .post('http://localhost:3008/comments', {
+            .post('https://fullstack-social-website.onrender.com/comments', {
                 commentBody: newComment, 
                 PostId: id
             },
@@ -48,7 +48,7 @@ function Post() {
     }
 
     const deleteComment = (_id) => {
-        axios.delete(`http://localhost:3008/comments/${_id}`, {
+        axios.delete(`https://fullstack-social-website.onrender.com/comments/${_id}`, {
             headers: {accessToken: localStorage.getItem('accessToken')},
         })
         .then(() => {
@@ -60,7 +60,7 @@ function Post() {
 
     
     const deletePost = (_id) => {
-        axios.delete(`http://localhost:3008/posts/${_id}`, {
+        axios.delete(`https://fullstack-social-website.onrender.com/posts/${_id}`, {
             headers: {accessToken: localStorage.getItem('accessToken')},
         })
         .then(() => {
@@ -71,7 +71,7 @@ function Post() {
     const editPost = (option) => {
         if (option === 'title') {
             let newTitle = prompt('Enter new Title:')
-            axios.put('http://localhost:3008/posts/title', {
+            axios.put('https://fullstack-social-website.onrender.com/posts/title', {
                 newTitle: newTitle, 
                 id: id
             },
@@ -81,7 +81,7 @@ function Post() {
             setPostObject({...postObject, title: newTitle})
         } else {
             let editedPost = prompt('Enter new Post:')
-            axios.put('http://localhost:3008/posts/postText', {
+            axios.put('https://fullstack-social-website.onrender.com/posts/postText', {
                 editedPost: editedPost, 
                 id: id
             },

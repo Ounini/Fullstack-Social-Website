@@ -7,7 +7,7 @@ function ChangePassword() {
     const [newPassword, setNewPassword] = useState('')
 
     const changePassword = () => {
-        axios.put('http://localhost:3008/auth/changePassword', {
+        axios.put('https://fullstack-social-website.onrender.com/auth/changePassword', {
             oldPassword: oldPassword,
             newPassword: newPassword
         }, {headers: {accessToken: localStorage.getItem('accessToken')}}
