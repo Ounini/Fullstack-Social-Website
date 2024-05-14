@@ -4,7 +4,7 @@ const express = require('express')
 
 const app = express()
 
-mongoose.connect('mongodb://localhost:27017/react-fullstack')
+mongoose.connect('mongodb+srv://Admin-Ounini:Slimmzy2468@atlascluster.bvmxvgc.mongodb.net/react-fullstack')
 
 const postSchema = new mongoose.Schema ({
 	title: {
