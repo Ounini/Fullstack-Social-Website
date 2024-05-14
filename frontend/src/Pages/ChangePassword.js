@@ -1,8 +1,11 @@
 import React, {useState} from 'react'
 import {Button, Form } from 'react-bootstrap'
 import axios from 'axios'
+import { useNavigate, useParams } from 'react-router-dom'
 
 function ChangePassword() {
+    const {id} = useParams()
+    const navigate = useNavigate()
     const [oldPassword, setOldPassword] = useState('')
     const [newPassword, setNewPassword] = useState('')
 
@@ -15,6 +18,7 @@ function ChangePassword() {
             if (response.data.error) {
                 alert(response.data.error)
             }
+            navigate(`/profile/${id}`)
         })
     }
 
