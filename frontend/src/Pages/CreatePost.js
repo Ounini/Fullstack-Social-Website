@@ -41,14 +41,14 @@ function CreatePost({onAddPost}) {
                                 name='title'
                                 value={title}
                                 onChange={e => setTitle(e.target.value)}
-                                placeholder='Ex. Title..' 
+                                placeholder='Title..' 
                                 required
                             />
                         </div>
                     </Col>
                     <Col sm={12}>
                         <div>
-                            <Form.Label>Post</Form.Label>
+                            <Form.Label >Post</Form.Label>
                             <Form.Control 
                                 as='textarea' 
                                 id='inputCreatePost' 
@@ -56,7 +56,7 @@ function CreatePost({onAddPost}) {
                                 name='postText' 
                                 value={postText}
                                 onChange={e => setPostText(e.target.value)}
-                                placeholder='Ex. Post..' 
+                                placeholder='Post..' 
                                 required
                             />
                         </div>

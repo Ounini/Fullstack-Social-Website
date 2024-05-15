@@ -3,6 +3,7 @@ import axios from 'axios'
 import {Container, Button} from 'react-bootstrap'
 import { useNavigate, Link } from 'react-router-dom'
 import { AuthContext } from '../helpers/AuthContext'
+import { capitalizeFirstLetter } from '../helpers/FirstLetterToCap'
 
 function Home() {
     const [listOfPosts, setListOfPosts] = useState([])
@@ -62,10 +63,10 @@ function Home() {
                 listOfPosts.map((value, key) => {
                     return (
                         <div className='post' key={value._id}> 
-                            <div className='title'>{value.title}</div>
+                            <div className='title'>{capitalizeFirstLetter(value.title)}</div>
                             <div className='body' onClick={() => {navigate(`/post/${value._id}`)}}>{value.postText}</div>
                             <div className='footer'>
-                                <Link to={`/profile/${value.UserId}`}>{value.username}</Link>
+                                <Link to={`/profile/${value.UserId}`} className='post-username' >{value.username}</Link>
                                 <Button 
                                     className='post-btn'
                                     onClick={() => {likeAPost(value._id)}}

@@ -13,6 +13,7 @@ import { AuthContext } from './helpers/AuthContext'
 import PageNotFound from './Pages/PageNotFound'
 import Profile from './Pages/Profile';
 import ChangePassword from './Pages/ChangePassword';
+import CollapsedMenu from './Pages/CollapsedMenu';
 
 function App() {
   const [post, setPost] = useState({})
@@ -58,19 +59,24 @@ function App() {
     <div className='App'>
       <AuthContext.Provider value={{authState, setAuthState}}>
         <Router>
-          <div className='navbar'>
+        <div className='navbar-nav'>
             {!authState.status ? (
-              <>
+              <div className='log-link'>
                 <Link to='/login'>Login</Link>
                 <Link to='/registration'>Registration</Link>
-              </>
+              </div>
             ) : (
               <>
-                <Link to='/'>Homepage</Link>
-                <Link to='/createpost'>Create A Post</Link>
+                <div className='d-block d-sm-none'>
+                  <CollapsedMenu />
+                </div>
+                <div className='d-none d-sm-block'>
+                  <Link to='/'>Homepage</Link>
+                  <Link to='/createpost'>Create A Post</Link>
+                </div>
               </>
             )}
-            <h1 className='username'> {authState.username} </h1>
+            <p className='username'> {authState.username} </p>
             {authState.status && 
               <Button  className='logout-button' onClick={logOut}>
                 Log Out

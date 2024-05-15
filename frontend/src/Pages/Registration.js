@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Form, Row, Col, Button } from 'react-bootstrap'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, Link} from 'react-router-dom'
 import axios from 'axios'
 
 function Registration({onSignUp}) {
@@ -20,43 +20,44 @@ function Registration({onSignUp}) {
         navigate('/')
     }
 
-  return (
-    <div className='createPostPage'>
-        <Form className='formContainer' onSubmit={submitSignUp}>
-            <Row>
-                <Col sm={12}>
-                    <div>
-                        <Form.Label>Username</Form.Label>
-                        <Form.Control 
-                            id='inputUsername' 
-                            type='text' 
-                            name='username'
-                            value={username}
-                            onChange={e => setUsername(e.target.value)}
-                            placeholder='Ex. slimmzy' 
-                            required
-                        />
-                    </div>
-                </Col>
-                <Col sm={12}>
-                    <div>
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control 
-                            id='inputPassword' 
-                            type='password' 
-                            name='passworrd'
-                            value={password}
-                            onChange={e => setPassword(e.target.value)}
-                            placeholder='Your Passowrd' 
-                            required
-                        />
-                    </div>
-                </Col>
-            </Row>
-            <Button type='submit'>Sign Up</Button>
-        </Form>
-    </div>
-  )
+    return (
+        <div className='createPostPage'>
+            <Form className='formContainer' onSubmit={submitSignUp}>
+                <Row>
+                    <Col sm={12}>
+                        <div>
+                            <Form.Label>Username</Form.Label>
+                            <Form.Control 
+                                id='inputUsername' 
+                                type='text' 
+                                name='username'
+                                value={username}
+                                onChange={e => setUsername(e.target.value)}
+                                placeholder='Ex. slimmzy' 
+                                required
+                            />
+                        </div>
+                    </Col>
+                    <Col sm={12}>
+                        <div>
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control 
+                                id='inputPassword' 
+                                type='password' 
+                                name='passworrd'
+                                value={password}
+                                onChange={e => setPassword(e.target.value)}
+                                placeholder='Your Passowrd' 
+                                required
+                            />
+                        </div>
+                    </Col>
+                </Row>
+                <Button type='submit'>Sign Up</Button>
+            </Form>
+            <Link to='/login' className='to-login'>Already registered? Login here</Link>
+        </div>
+    )
 }
 
 export default Registration

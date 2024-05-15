@@ -25,7 +25,7 @@ function Profile() {
     return (
         <div className='profilePageContainer'>
             <div className='basicInfo'>
-               <h1> Username: {username} </h1>
+               <h1 className='profile-username'> Username: {username} </h1>
                {authState.username === username && (       
                     <Button onClick={() => navigate('/change+password')}>Change Password </Button>
                 )}

@@ -1,64 +1,86 @@
 body {
-    overflow-x: hidden;
-    margin: 0;
     padding: 0;
-    padding-bottom: 30px;
+    margin: 0;
+    overflow-x: hidden;
 }
 .App {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    display: block;
+    background-color: rgba(26, 26, 26);
+    font-family: Arial, Helvetica, sans-serif;    
+    display: grid;
+    padding-bottom: 50px;
     font-size: 14px;
 }
-.navbar {
+.navbar-nav {
     display: block !important;
     justify-content: start;
     text-align: start;
-    background-color: cornflowerblue;
+    background-image: url('./components/Images/homePageBG.jpg');
+    height: auto;
     padding: 25px !important;
     width: 100%;
     padding-left: 0px !important;
-    padding-left: 0px !important;
+    box-shadow: 0 0 5px 0 #fff;
+    position: fixed;
+    top: 0;
 }
 a {
     padding: 10px;
+    padding-top: 0 !important;
     color: white !important;
     text-decoration: none !important;
 }
 a:hover {
-    color: red;
+    color: red !important;
+}
+.home {
+    margin-top: 80px;
+    display: grid;
+    justify-content: center;
 }
 .post {
     margin-top: 50px;
-    width: 350px;
+    width: 370px;
+    height: auto;
+    text-align: center;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0px 0px 1px 0 #000;
+    color: #fff;
+    background-image: url('./components/Images/postBG.webp');
+    box-shadow: 0px 0px 5px 0px #fff;
 }
 .post:hover {
-    box-shadow: 0 0 5px 0 #000;
+    box-shadow: 0 0 10px 0 red;
     cursor: pointer;
 }
 .title {
-    text-transform: capitalize;
-    height: 50px;
+    height: auto;
     background-color: cornflowerblue;
     color: #fff;
     padding: 12px;
 }
 .body {
     padding: 50px;
+    text-shadow: 5px 5px 5px #000;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 .footer {
-    text-transform: capitalize;
     height: 50px;
     background-color: cornflowerblue;
     color: #fff;
     padding: 12px;
     text-align: start;   
 }
+.post-username:hover {
+    color: gold !important;
+}
 .createPostPage {
-    margin: 50px;
+    margin: 100px;
+    margin-top: 0;
+    height: 100vh;
+    display: grid;
+    align-content: center;
+    justify-content: center;
 }
 .formContainer {
     width: 550px;
@@ -68,7 +90,8 @@ a:hover {
 .form-label {
     float: left;
     margin-top: 10px; 
-    font-size: 16px;  
+    font-size: 16px; 
+    color: #fff; 
 }
 .btn,
 .btn-primary {
@@ -78,20 +101,21 @@ a:hover {
     padding: 0;
 }
 .postPage {
-    display: grid !important;
+    margin-top: 80px;
+    height: 100vh;
 }
 .leftSide {
-    margin: 30px;
+    margin-left: 80px;
 }
 .postTitle {
     font-size: 16px;
     padding: 20px;
     background-color: cornflowerblue;
     color: #fff;
-    text-transform: capitalize;
 }
 .postBody {
-    padding: 50px;
+    text-shadow: 5px 5px 5px #000;
+    padding: 100px;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -106,50 +130,76 @@ a:hover {
     padding: 20px;
 }
 .input-field {
-    width: 200px !important;
+    width: 300px !important;
     height: 60px;
 }
 .button {
-    width: 200px !important;
+    width: 300px !important;
     margin-top: 5px !important;
-    margin-left: -60px !important;
 }
 .addCommentContainer {
     padding-left: 60px;
 }
-.comment {
-    border: 1px rgba(26, 26, 26);
-    box-shadow: 0px 0px 1px 0 #000;
-    margin: 20px;
+.comments {
+    position: relative;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fff;
     width: 300px;
-    padding: 20px;
-    text-align: start;
+    margin: 60px;
+    margin-top: 50px;
+    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-radius: 5px;
 }
+.commentBody {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.commentUser {
+    color: red;
+    
+}
 .login-container {
+    height: 100vh;
     display: grid;
     justify-content: center;
-    margin: 100px;
+    align-content: center;
+}
+.login-box {
+    width: 300px;
+    height: auto;
 }
 .login-input {
     box-shadow: 0 0 1px 1px cornflowerblue;
 }
 .logout-button {
     float: right;
-    text-align: end;
     width: 100px;
     font-size: 14px !important;
-    margin-top: -25px !important;
+    margin-top: -8px !important;
+    margin-bottom: -12px;
     margin-left: 20px !important;
+    background-color: rgba(26, 26, 26) !important;
 }
-h1.username {
+.logout-button:hover {
+    border: 1px solid #fff !important;
+    box-shadow: 0 0 10px 0 #fff;
+}
+p.username {
+    margin: -25px;
     text-align: end;
-    margin-top: -30px;
-    margin-bottom: -10px;
-    padding-right: 110px;
-    font-size: 20px;
+    padding-right: 130px;
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 5px 5px 5px #000;
 }
 .trash {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
     background-color: transparent !important;
     border: none !important;
     width: 50px;
@@ -190,16 +240,34 @@ h1.username {
     color: red;
 }
 .profilePageContainer {
+    width: 100vw;
+    height: 100vh;
     margin: 50px;
+    /* margin-top: 200px; */
     display: grid;
     align-content: center;
     justify-content: center;
 }
+.profile-username {
+    color: #fff;
+    font-size: 24px;
+}
+.basicInfo button {
+    background-color: #000 !important;
+}
 .profile-likes {
     float: right;
 }
+h4 {
+    text-align: center;
+    color: #fff !important;
+    border: 1px #fff;
+    box-shadow: 0 0 5px 0 #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
 .changePasswordCon {
-    margin: 50px;
+    height: 100vh;
     display: grid;
     align-content: center;
     justify-content: center;
@@ -210,3 +278,261 @@ h1.username {
 .form-control {
     margin-top: 20px;
 }
+.log-link {
+    margin-top: -10px;
+    padding-bottom: 10px;
+}
+.sign {
+    font-size: 16px;
+    position: relative;
+    top: 20px;
+}
+.to-login {
+    font-size: 16px;
+    position: relative;
+    top: 20px;
+}
+
+
+/** media breakpoints **/
+/************ xtra xtra lerge device only **************/
+@media (min-width: 1400px) {
+ 
+}
+/********** xtra large device only **********/
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+}
+/******** large device only ********/ 
+@media (min-width: 992px) and (max-width: 1199px) {
+    .leftSide {
+        margin-left: 30px;
+    }
+    .rightSide {
+        margin-top: 10px;
+    }
+}
+
+/******** medium device only *******/
+@media (min-width: 768px) and (max-width: 991px) {
+    .postPage {
+        display: flex !important;
+        justify-content: center;
+        align-content: center;
+        margin-left: 25%;
+    }
+    .leftSide {
+        margin-left: 0;
+    }
+    .rightSide {
+        margin-left: -45px;
+    }
+} 
+/********* small device only *******/
+@media (min-width: 576px) and (max-width: 767px) {
+    .profilePageContainer {
+        margin: 0;
+    }
+    .createPostPage {
+        margin: 0px;
+    }  
+    .formContainer {
+        width: 450px;
+    }
+    .postPage {
+        display: flex !important;
+        justify-content: center;
+        align-content: center;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 17%;
+        padding-top: 0;
+    }
+    .leftSide {
+        margin-left: 0;
+    }
+    .rightSide {
+        margin-left: -55px;
+    }
+}
+/********** xtra small device only *******/
+@media (min-width: 555px) and (max-width: 575px) {
+    .profilePageContainer {
+        margin: 0;
+    }
+    .createPostPage {
+        margin: 0px;
+    }  
+    .formContainer {
+        width: 450px;
+    }
+    .post {
+        width: 100%;
+        font-size: 14px;
+    }
+    .body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .icon:hover {
+        color: red;
+    }
+    .menu-btn {
+        background-color: transparent !important;
+        border: none !important;
+        width: auto;
+        margin: 0;
+        margin-top: -20px;
+        margin-bottom: -10px;
+    }
+    #collapsed-menu {
+        margin-top: 10px;
+    }
+    p.username {
+        font-size: 16px;
+        padding-right: 115px;
+    }
+    .logout-button {
+        width: 80px;
+    }
+    .postPage {
+        display: flex !important;
+        justify-content: center;
+        align-content: center;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 17%;
+        padding-top: 0;
+    }
+    .leftSide {
+        margin-left: 0;
+    }
+    .rightSide {
+        margin-left: -65px;
+    }
+}
+
+/* *********** */
+@media (min-width: 480px) and (max-width: 554px) {
+    .profilePageContainer {
+        margin: 0;
+    }
+    .createPostPage {
+        margin: 0px;
+    }  
+    .formContainer {
+        width: 400px;
+    }
+    .post {
+        width: 100%;
+        font-size: 14px;
+    }
+    .body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .icon:hover {
+        color: red;
+    }
+    .menu-btn {
+        background-color: transparent !important;
+        border: none !important;
+        width: auto;
+        margin: 0;
+        margin-top: -20px;
+        margin-bottom: -10px;
+    }
+    #collapsed-menu {
+        margin-top: 10px;
+    }
+    p.username {
+        font-size: 16px;
+        padding-right: 115px;
+    }
+    .logout-button {
+        width: 80px;
+    }
+    .postPage {
+        display: flex !important;
+        justify-content: center;
+        align-content: center;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10%;
+        padding-top: 0;
+    }
+    .leftSide {
+        margin-left: 0;
+    }
+    .rightSide {
+        margin-left: -55px;
+    }
+}
+
+ /* ****************/
+ @media (max-width: 479px) {
+    .passwordInput {
+        width: 100%
+    }
+    .profilePageContainer {
+        margin: 0;
+    }
+    .createPostPage {
+        margin: 5px;
+    }  
+    .formContainer {
+        width: 100%;
+    }    
+    .post {
+        width: 100%;
+        font-size: 14px;
+    }
+    .body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .icon:hover {
+        color: red;
+    }
+    .menu-btn {
+        background-color: transparent !important;
+        border: none !important;
+        width: auto;
+        margin: 0;
+        margin-top: -20px;
+        margin-bottom: -10px;
+    }
+    #collapsed-menu {
+        margin-top: 10px;
+    }
+    p.username {
+        font-size: 16px;
+        padding-right: 115px;
+    }
+    .logout-button {
+        width: 80px;
+    }
+    .postPage {
+        display: flex !important;
+        justify-content: center;
+        align-content: center;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 5%;
+        padding-top: 0;
+    }
+    .leftSide {
+        margin-left: 0;
+    }
+    .rightSide {
+        margin-left: -55px;
+    }
+    #individual {
+        padding: none;
+        max-width: 400px;
+        width: 90%;
+    }
+    #posted {
+        padding: inherit;
+    }
+ }
