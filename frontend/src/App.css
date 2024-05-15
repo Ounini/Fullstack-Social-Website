@@ -242,7 +242,7 @@ p.username {
 }
 .profilePageContainer {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     margin: 50px;
     /* margin-top: 200px; */
     display: grid;
