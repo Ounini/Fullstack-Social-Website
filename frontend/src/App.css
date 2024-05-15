@@ -3,7 +3,7 @@ body {
     height: 100vh;
     padding: 0;
     margin: 0;
-    background-color: rgba(26, 26, 26, 1.0);
+    background-color: rgba(26, 26, 26, 1.0) !important;
     overflow-x: hidden;
 }
 .App {
@@ -336,6 +336,7 @@ h4 {
 @media (min-width: 576px) and (max-width: 767px) {
     .profilePageContainer {
         margin: 0;
+        margin-top: 100px;
     }
     .createPostPage {
         margin: 0px;
@@ -363,6 +364,7 @@ h4 {
 @media (min-width: 555px) and (max-width: 575px) {
     .profilePageContainer {
         margin: 0;
+        margin-top: 100px;
     }
     .createPostPage {
         margin: 0px;
@@ -420,6 +422,7 @@ h4 {
 @media (min-width: 480px) and (max-width: 554px) {
     .profilePageContainer {
         margin: 0;
+        margin-top: 100px;
     }
     .createPostPage {
         margin: 0px;
@@ -480,6 +483,7 @@ h4 {
     }
     .profilePageContainer {
         margin: 0;
+        margin-top: 100px;
     }
     .createPostPage {
         margin: 5px;
